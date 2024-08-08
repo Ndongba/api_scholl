@@ -8,4 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Matiere extends Model
 {
     use HasFactory;
+
+    protected $guarded=[];
+
+    public function evaluation(){
+
+        return $this->hasMany(Evaluation::class);
+    }
+
+    public function ue(){
+
+        return $this->belongsTo(Ue::class);
+    }
+
 }
