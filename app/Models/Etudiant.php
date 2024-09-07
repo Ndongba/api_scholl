@@ -9,5 +9,11 @@ class Etudiant extends Model
 {
     use HasFactory;
 
-    protected $guard = [];
+     protected $guard = [];
+
+
+    public function evaluation(){
+
+        return $this->hasMany(Evaluation::class);
+    }
 }

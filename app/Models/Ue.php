@@ -9,5 +9,11 @@ class Ue extends Model
 {
     use HasFactory;
 
+
     protected $guard = [];
+
+    public function matiere(){
+
+        return $this->hasMany(Matiere::class);
+    }
 }
