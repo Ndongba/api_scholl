@@ -10,4 +10,15 @@ class Matiere extends Model
     use HasFactory;
 
     protected $guard = [];
+
+    public function evaluation(){
+
+        return $this->hasMany(Evaluation::class);
+    }
+
+    public function ue(){
+
+        return $this->belongsTo(Ue::class);
+    }
+
 }
